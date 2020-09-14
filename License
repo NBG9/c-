@@ -1,0 +1,103 @@
+#include <iostream>
+#include <string>
+
+
+   
+   
+void license(){
+   bool has_license;
+ 
+//std::string Y;
+//std::string N;
+std::cout << "Welcome to the MOI Licensing Affairs Department." << "\n";
+std::cout << "Please state if you have a driving license.";
+std::cout << "  " << "\n";
+std::cout << "If YES, please press 1." << "\n";
+std::cout << "  "<<"\n";
+std::cout << "If NO, please press 0." << "\n";
+std::cin >> has_license;
+
+
+if(has_license == 1){
+    std::cout << "Drive Safely!" << "\n";
+}else if(has_license == 0){
+        std::cout << "You have been redirected..." << "\n";
+        std::cout << "This is an automated program to check if you are eligible to drive." << "\n";
+        std::cout << "Please enter your age below:-" << "\n";
+        int age;
+        std::cin >> age;
+
+            if(age>=18 && age<90){
+                std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                std::cout << "You are eligible to obtain a license and drive." << "\n";
+                std::cout << "Please report to the nearest traffic department office of the ministry of interior." << "\n";
+                std::cout << "Thank you." << "\n";
+                std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                std::cout<< "     " << "\n";
+                std::cout<< "     " << "\n";
+                std::cout<< "     " << "\n";
+                std::cout<< "     " << "\n";
+
+                license();
+                }else if(age>=90){
+                std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                std::cout << "For your own safety, we do not recommend you to drive any vehicle." << "\n";
+                std::cout << "Thank you." << "\n";
+                std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                std::cout<< "     " << "\n";
+                std::cout<< "     " << "\n";
+                std::cout<< "     " << "\n";
+                license();
+            }else if(age<18 && age>=7){
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout << "Sorry, you are not eligible to obtain a driving license until you reach the age of 18." << "\n";
+                 std::cout << "Please wait " << 18-age << " More years." << "\n";
+                 std::cout << "Thank you." << "\n";
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 license();
+            }else if(age<7 && age>= 5){
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout << "Sorry, you are not eligible to obtain a driving license until you reach the age of 18." << "\n";
+                 std::cout << "Maybe you should try riding a bicycle instead :) " << "\n";
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 license();
+            }else if(age<5 && age>0){
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout << "Sorry, you are not eligible to obtain a driving license until you reach the age of 18." << "\n";
+                 std::cout << "Maybe you should try riding a tricycle instead :) " << "\n";
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 license();
+            }else if(age<=0){
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout << "INVALID INPUT"<<"\n";
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 license();
+            }
+             else{
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout<<"INVALID INPUT"<<"\n";
+                 std::cout<< "------------------------------------------------------------------------------------" << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 std::cout<< "     " << "\n";
+                 license();
+             }
+             }
+    }
+
+
+int main(){
+    license();
+}
